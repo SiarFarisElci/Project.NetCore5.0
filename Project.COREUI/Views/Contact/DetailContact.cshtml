@@ -1,0 +1,39 @@
+﻿@model ContactVM
+
+@{
+    ViewData["Title"] = "DetailContact";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>DetailContact</h1>
+
+
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Mesaj Detail Sayfası</h4>
+
+            <form class="forms-sample">
+                @Html.HiddenFor(x=> x.Contact.ID)
+                <div class="form-group">
+               
+                    <label for="exampleInputName1">Isım</label>
+                    <input type="text" asp-for="Contact.Name" class="form-control" id="exampleInputName1" placeholder="Isım">
+                </div>
+              
+                <div class="form-group">
+
+                    <label for="exampleInputName1">Mail Adresi</label>
+                    <input type="email" asp-for="Contact.Mail" class="form-control" id="exampleInputName1" placeholder="Isım">
+                </div>
+                <div class="form-group">
+
+                    <label for="exampleInputName1">Mesaj Detayı</label>
+                    <textarea  asp-for="Contact.Message" class="form-control" id="exampleInputName1" placeholder="Mesajınız"></textarea>
+                </div>
+           
+            </form>
+        </div>
+    </div>
+</div>

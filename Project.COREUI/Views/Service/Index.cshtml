@@ -1,0 +1,49 @@
+﻿@model ServiceVM
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Index</h1>
+
+@if (Model.Services.Count == 0)
+{
+    <div>
+        Henuz hicbir servis eklenmemiş.. Servis eklenmek icin <a asp-action="AddService" asp-controller="Service"> Tıklayınız </a>
+    </div>
+
+}
+else
+{
+    <div class="card card-header">
+        <div class="card card-body">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Baslık</th>
+                        <th> Acıkalama</th>
+                        <th>Image </th>
+                        <th>Durum </th>
+                        <th colspan="2">  Islemler</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (Service item in Model.Services)
+                    {
+                        <tr>
+                            <th>@item.Title</th>
+                            <th>@item.Description</th>
+                            <th>@item.Image</th>
+                            <th>@item.Status</th>
+                            <th><a asp-action="UpdateService" asp-controller="Service" asp-route-id="@item.ID" class="btn btn-warning"> Guncelle </a></th>
+                            <th><a asp-action="DeleteService" asp-controller="Service" asp-route-id="@item.ID" class="btn btn-danger"> Sil </a></th>
+                        </tr>
+                    }
+
+                </tbody>
+            </table>
+            <br>
+            <button class="btn btn-warning"> <a href="/Service/AddService"> Ekle </a> </button>
+        </div>
+    </div>
+}

@@ -1,0 +1,50 @@
+﻿@model NewVM
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Index</h1>
+
+
+@if (Model.News.Count == 0)
+{
+    <div>
+        Henuz hicbir duyuru eklenmemiş.. Duyuru eklenmek icin <a asp-action="AddNew" asp-controller="New"> Tıklayınız </a>
+    </div>
+
+}
+else
+{
+    <div class="card card-header">
+        <div class="card card-body">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Baslık</th>
+                        <th> Tarih</th>
+                        <th>Durum </th>
+                        <th colspan="2">  Islemler</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (New item in Model.News)
+                    {
+                        <tr>
+                            <th>@item.Title</th>
+                            <th>@item.CreatedDate.ToShortDateString()</th>
+                            <th>@item.Status</th>
+                            <th><a asp-action="UpdateNew" asp-controller="New" asp-route-id="@item.ID" class="btn btn-warning"> Guncelle </a></th>
+                            <th><a asp-action="DeleteNew" asp-controller="New" asp-route-id="@item.ID" class="btn btn-danger"> Sil </a></th>
+                        </tr>
+                    }
+
+                </tbody>
+            </table>
+            <br>
+            <button class="btn btn-warning"> <a href="/New/AddNew"> Ekle </a> </button>
+
+        </div>
+    </div>
+}

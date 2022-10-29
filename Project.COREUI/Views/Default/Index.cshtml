@@ -1,0 +1,561 @@
+﻿@model DefaultVM
+
+@{
+    Layout = null;
+}
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>In Harvest an Agriculture Category Flat Bootstrap Responsive Website Template | Home :: W3layouts</title>
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="In Harvest Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //for-mobile-apps -->
+<link href="~/web/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="~/web/css/font-awesome.css" rel="stylesheet"> 
+<link rel="stylesheet" href="~/web/css/chocolat.css" type="text/css" media="screen">
+<link href="~/web/css/easy-responsive-tabs.css" rel='stylesheet' type='text/css'/>
+<link href="~/web/css/style.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="~/web/js/modernizr-2.6.2.min.js"></script>
+<!--fonts-->
+<link href="//fonts.googleapis.com/css?family=Josefin+Sans:400,100,100italic,300,300italic,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'" >
+<link href="//fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+<!--//fonts-->
+
+</head>
+<body>
+<!-- header -->
+	<div class="header">
+		<div class="container">
+			<div class="w3l_header_left">
+			
+					@foreach (Adress item in Model.Adresses)
+					{	<ul>
+					<li><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>@item.Description3</li>
+					<li><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> @item.Description4</li>
+					<li><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> <a href="mailto:info@example.com">@item.Description2</a></li>
+					</ul>
+					}
+				
+			</div>
+			<div class="w3l_header_right">
+				<div class="w3ls-social-icons text-left">
+					<a class="github" href="https://github.com/SiarFarisElci"><i class="fa fa-github"></i></a>
+					<a class="twitter" href="https://twitter.com/siarelci"><i class="fa fa-twitter"></i></a>
+					<a class="pinterest" href="#"><i class="fa fa-pinterest-p"></i></a>
+					<a class="linkedin" href="https://www.linkedin.com/in/%C5%9Fiar-faris-el%C3%A7i-259ba1198/"><i class="fa fa-linkedin"></i></a>
+				</div>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+	
+<!-- //header -->
+		<!--Slider-->
+		<div class="slider">
+<div class="header-bottom">
+		<div class="container">
+			<nav class="navbar navbar-default">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+				  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				  </button>
+					<div class="logo">
+						<h1><a class="navbar-brand" href="index.html"><span>In</span>Harvest</a></h1>
+					</div>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
+					<nav class="cl-effect-1" id="cl-effect-1">
+						<ul class="nav navbar-nav">
+							<li><a href="#home" class="active" data-hover="Home">AnaSayfa</a></li>
+							<li><a href="#about" class="scroll" data-hover="About">Hakkımızda</a></li>
+							<li><a href="#services" class="scroll" data-hover="Services">Hizmetlerimiz</a></li>
+							<li><a href="#team" class="scroll" data-hover="Team">Takımımız</a></li>
+							<li><a href="#gallery" class="scroll" data-hover="Projects">Galeri</a></li>
+							<li><a href="#contact" class="scroll" data-hover="Contact">İletişiö</a></li>
+						</ul>
+					</nav>
+				</div>
+				<!-- /.navbar-collapse -->
+			</nav>
+			<div class="w3ls_search">
+				<div class="cd-main-header">
+					<ul class="cd-header-buttons">
+						<li><a class="cd-search-trigger" href="#cd-search"> <span></span></a></li>
+					</ul> <!-- cd-header-buttons -->
+				</div>
+				<div id="cd-search" class="cd-search">
+					<form action="#" method="post">
+						<input name="Search" type="search" placeholder="Aranacak Kelimeyi...">
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+			<div class="callbacks_container">
+			<ul class="rslides" id="slider3">
+						<li>
+						
+							<div class="slider-info">
+								<h3>ENVIRONMENT & SUSTAINABILITY</h3>
+								<p>Using innovative equipment to reduce time and energy in farming</p>
+								<div class="readmore-w3"><a class="readmore" href="#" data-toggle="modal" data-target="#myModal1">Read More</a></div>
+							</div>
+						</li>
+						<li>
+							<div class="slider-info">
+							<h3>Offering farming solutions worldwide.</h3>
+							<p>Cultivating new crops to make farmers increase profits</p>
+							<div class="readmore-w3"><a class="readmore" href="#" data-toggle="modal" data-target="#myModal1">Read More</a></div>
+						</div>
+						</li>
+						<li>
+						<div class="slider-info">
+							<h3>ENVIRONMENT & SUSTAINABILITY</h3>
+						    <p>Using innovative equipment to reduce time and energy in farming</p>
+							<div class="readmore-w3"><a class="readmore" href="#" data-toggle="modal" data-target="#myModal1">Read More</a></div>
+						</div>
+						</li>
+						<li>
+							<div class="slider-info">
+							<h3>Offering farming solutions worldwide.</h3>
+							<p>Cultivating new crops to make farmers increase profits</p>
+							<div class="readmore-w3"><a class="readmore" href="#" data-toggle="modal" data-target="#myModal1">Read More</a></div>
+						</div>
+						</li>
+
+					</ul>
+				
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		
+		<div class="modal fade" id="myModal1" tabindex="-1" role="dialog">
+						<!-- Modal1 -->
+							<div class="modal-dialog">
+							<!-- Modal content-->
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal">&times;</button>
+										<h4>In Harvest</h4>
+										<img src="images/banner1.jpg" alt=" " class="img-responsive">
+										<h5>ENVIRONMENT & SUSTAINABILITY</h5>
+										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- //Modal1 -->
+		<!--//Slider-->
+<!--//Header-->
+
+<!-- about -->
+	<div class="about" id="about">
+		<div class="container">
+		<h3 class="tittle">Hakkımızda</h3>
+		<p class="heading-btm-w3ls">Dünya standartlarında tamamen organik dogal urunler.</p>
+			<div id="horizontalTab">
+				<ul class="resp-tabs-list">
+					<li>Tarihce</li>
+					<li>Hakkımızda</li>
+					<li>Musteriler </li>
+				</ul>
+				@foreach (About item in Model.Abouts)
+				{
+					
+				
+				<div class="resp-tabs-container">
+					<div class="tab1">
+						<p class="para-w3-agileits">@item.History</p>
+					</div>
+					<div class="tab2">
+						<p class="para-w3-agileits">@item.AboutUs  </p>
+					</div>
+					<div class="tab3">
+						<div class="clients">
+							<ul>
+								<li><img src="~/web/images/c1.png" alt="clients" class="img-responsive" /><span>Sean Damon</span></li>
+								<li><img src="~/web/images/c2.png" alt="clients" class="img-responsive" /><span>Natalie Barnes</span></li>
+								<li><img src="~/web/images/c3.png" alt="clients" class="img-responsive" /><span>John Mccoist</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				}
+			</div>			
+			   </div>
+		</div>
+<!-- //about-bottom -->
+<!--sevices-->
+<div class="sevices-w3layouts" id="services">
+	<div class="container">
+	<h3 class="tittle">Hizmetlerimiz</h3>
+		<p class="heading-btm-w3ls"> Hizmetlerlimize asağıda görebilirsiniz.</p>
+		<div class="services-main">
+			@foreach (Service item in Model.Services)
+				{
+					
+			
+				<div class="@item.Class1" data-wow-delay=".5s">
+					<h5>@item.Title</h5>
+					<p>@item.Description</p>
+					
+					<div class="@item.Class2">
+						<i class="@item.Image" aria-hidden="true"></i>
+						<p>Lorem ipsum</p>
+					</div>
+				</div>
+					}
+				
+		</div>
+				<div class="clearfix"> </div>	
+	</div>
+</div>
+<!--//sevices-->
+<!-- team -->
+	<div class="team" id="team">
+		<div class="container">
+			<h3 class="tittle">Ekip Arkadaşlarımız </h3>
+			<p class="heading-btm-w3ls">Birbirinden farklı konularda oldukca donanımlı ekip arkadaslarımız.</p>
+			<div class="wthree_team_grids">
+				@foreach (Team item in Model.Teams)
+				{
+					
+				
+				<div class="col-md-3 wthree_team_grid">
+					<div class="hovereffect">
+						<img src="@item.ImageUrl" alt=" " class="img-responsive" />
+						<div class="overlay">
+							<div class="rotate">
+								<p class="group1">
+									<a href="@item.TwitterUrl">
+										<i class="fa fa-twitter"></i>
+									</a>
+									<a href="@item.FacebookUrl">
+										<i class="fa fa-facebook"></i>
+									</a>
+								</p>
+									<hr>
+									<hr>
+								<p class="group2">
+									<a href="@item.InstagramUrl">
+										<i class="fa fa-instagram"></i>
+									</a>
+									<a href="@item.WebSiteUrl">
+										<i class="fa fa-dribbble"></i>
+									</a>
+								</p>
+							</div>
+						</div>
+					</div>
+					<h4>@item.FullName</h4>
+					<p>@item.Title</p>
+				</div>
+				}
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+<!-- //team -->
+<!--blog -->
+<div class="blog" id="blog">
+	<div class="container">
+	<h3 class="tittle"> Son Duyurular</h3>
+	<p class="heading-btm-w3ls"> Son Duyurular asağıdadır.</p>
+		<div class="blog-grid-w3-agileits">
+			<div class=" col-md-7 blog-img1-agileits-w3layouts">
+			<a  href="#" data-toggle="modal" data-target="#myModal2"></a>
+			</div>
+			<div class=" col-md-5 blog-info-w3layouts">
+				<h6> <a  href="#" data-toggle="modal" data-target="#myModal2">FURTHER DEVELOPMENT IN AGRICULTURE GROWTH</a></h6>
+				<div class="inner-info">
+					<a href="#" class="blog-text-w3ls bar">Lorem ipsum.</a><span>16/11/2016</span>
+					<p class="para-w3-agileits">Aenean pulvinar diam vel felis volutpat dictum. Aenean ac tellus suscipit sapien scelerisque tempus non mollis massa.</p>
+				</div>
+				<a  href="#" class="blog-more-agile" data-toggle="modal" data-target="#myModal2">Read More</a>
+			
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="blog-grid-w3-agileits">
+			<div class=" col-md-5 blog-info-w3layouts blog-mid">
+				<h6><a  href="#" data-toggle="modal" data-target="#myModal3">KEEPING ON ADVANCING THE AGRICULTURE INDUSTRY</a></h6>
+				<div class="inner-info-mid">
+					<a href="#" class="blog-text-w3ls mid-bar">Lorem ipsum.</a><span>12/10/2016</span>
+					<p class="para-w3-agileits">Aenean pulvinar diam vel felis volutpat dictum. Aenean ac tellus suscipit sapien scelerisque tempus non mollis massa.</p>
+				</div>
+				<a  href="#" class="blog-more-agile" data-toggle="modal" data-target="#myModal3">Read More</a>
+			
+			</div>
+			<div class=" col-md-7 blog-img2-agileits-w3layouts">
+			<a  href="#" data-toggle="modal" data-target="#myModal3"></a>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="blog-grid-w3-agileits">
+			<div class=" col-md-7 blog-img3-agileits-w3layouts">
+				<a  href="#" data-toggle="modal" data-target="#myModal4"></a>
+			</div>
+			<div class=" col-md-5 blog-info-w3layouts">
+				<h6><a  href="#" data-toggle="modal" data-target="#myModal4"> OUR FIRST STEPS ON THE MARKET AMONG AGRICULTURAL COMPANIES</a></h6>
+				<div class="inner-info">
+					<a href="#" class="blog-text-w3ls bar">Lorem ipsum.</a><span>06/8/2016</span>
+					<p class="para-w3-agileits">Aenean pulvinar diam vel felis volutpat dictum. Aenean ac tellus suscipit sapien scelerisque tempus non mollis massa.</p>
+				</div>
+				<a  href="#" class="blog-more-agile" data-toggle="modal" data-target="#myModal4">Read More</a>
+			
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+</div>
+<!-- //blog -->
+						<!-- Modal2 -->
+						<div class="modal fade" id="myModal2" tabindex="-1" role="dialog">
+							<div class="modal-dialog">
+							<!-- Modal content-->
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal">&times;</button>
+										<h4>In Harvest</h4>
+										<img src="images/b1.jpg" alt=" " class="img-responsive">
+										<h5>FURTHER DEVELOPMENT IN AGRICULTURE GROWTH</h5>
+										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- //Modal2 -->
+						<!-- Modal3 -->
+						<div class="modal fade" id="myModal3" tabindex="-1" role="dialog">
+							<div class="modal-dialog">
+							<!-- Modal content-->
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal">&times;</button>
+										<h4>In Harvest</h4>
+										<img src="images/b2.jpg" alt=" " class="img-responsive">
+										<h5>KEEPING ON ADVANCING THE AGRICULTURE INDUSTRY</h5>
+										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- //Modal3 -->
+						<!-- Modal4 -->
+						<div class="modal fade" id="myModal4" tabindex="-1" role="dialog">
+							<div class="modal-dialog">
+							<!-- Modal content-->
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal">&times;</button>
+										<h4>In Harvest</h4>
+										<img src="images/b3.jpg" alt=" " class="img-responsive">
+										<h5>OUR FIRST STEPS ON THE MARKET AMONG AGRICULTURAL COMPANIES</h5>
+										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- //Modal4 -->
+ <!--/gallery-->
+
+ <div class="gallery" id="gallery">
+	<div class="container">
+	<h3 class="tittle">Galeri</h3>
+	<p class="heading-btm-w3ls">Organik urunlerimiz ve gorseller</p>
+		<div class="agile_gallery_grids w3-agile">
+
+				<ul class="clearfix demo">
+					@foreach (Image item in Model.Images)
+				{
+					<li>
+						<div class="gallery-grid1">
+							<img src="@item.ImageUrl" alt=" " class="img-responsive" />
+							<div class="p-mask">
+									<h4> <span>@item.Title</span></h4>
+								<p>@item.Description</p>
+							</div>
+						</div>
+					</li>
+				}
+				</ul>
+				
+			</div>
+	</div>
+</div>
+<!--//gallery-->
+<!--footer-->
+<div class="contact-agile" id="contact">
+			<div class="container">
+				<h3 class="tittle"> Bize Ulasın </h3>
+		<p class="heading-btm-w3ls">Asağıdaki form uzerinden bize mail gonderebilir veya arayabilirsiniz.</p>
+		@foreach (Adress item in Model.Adresses)
+			{
+				
+		
+				<div class="col-md-3 contact-left">
+					<h4>Bizim Adresimiz</h4>
+					<p>@item.Description1</p>
+					<p>@item.Description2,</p>
+					<p>@item.Description3, USA</p>
+					<h4>Phone</h4>
+					<p>@item.Description4</p>
+
+				</div>
+					}
+				<div class="col-md-9 contact-middle">
+					<h2>Bize Yazın</h2>
+					<form action="/Default/SendMessage" method="post">
+					<div class="form-agileinfo">
+						<p>Adınız Soyadınız</p>
+						<input type="text" asp-for="Contact.Name" placeholder="Adınız" required="" />
+						<p>Email</p>
+						<input type="email"  asp-for="Contact.Mail" placeholder=" Email Adresiniz" required="" />
+					</div>
+					<div class="form-agileits-w3layouts">
+					<p>Mesajınız</p>
+						<textarea   asp-for="Contact.Message" placeholder="Mesaj..." required="" ></textarea>
+							<input type="submit"   value="Mesajı Gonder">
+					</div>
+					<div class="clearfix"></div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="map-w3ls">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6209.852593501853!2d-77.0416869731965!3d38.902800718279195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xae69b9ad9dbd5ebf!2sRenaissance+Washington%2C+DC+Dupont+Circle+Hotel!5e0!3m2!1sen!2sin!4v1479208161830"></iframe>
+		</div>
+			    <div class="bottom-social-w3ls w3ls-social-icons">
+		<a class="github" href="https://github.com/SiarFarisElci"><i class="fa fa-github"></i></a>
+		<a class="twitter" href="https://twitter.com/siarelci"><i class="fa fa-twitter"></i></a>
+		<a class="pinterest" href="#"><i class="fa fa-pinterest-p"></i></a>
+		<a class="linkedin" href="https://www.linkedin.com/in/%C5%9Fiar-faris-el%C3%A7i-259ba1198/"><i class="fa fa-linkedin"></i></a>
+				</div>
+			<div class="copy">
+		        <p>@DateTime.UtcNow.Year  <a href="http://w3layouts.com/"> Core .Net Proje </a> </p>
+		    </div>
+<!--/footer -->
+
+<!-- js -->
+	<script type="text/javascript" src="~/web/js/jquery-2.1.4.min.js"></script>
+<!--gallery-js -->
+<script src="~/web/js/jquery.picEyes.js"></script>
+				<script>
+					$(function(){
+						//picturesEyes($('.demo li'));
+						$('.demo li').picEyes();
+					});
+				</script>
+<!--//gallery-js -->
+<!-- start-smoth-scrolling -->
+<script type="text/javascript" src="~/web/js/move-top.js"></script>
+<script type="text/javascript" src="~/web/js/easing.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>
+<!-- start-smoth-scrolling -->
+<!--light-box-files -->
+<script src="~/web/js/jquery.chocolat.js"></script>
+<!--//light-box-files -->
+		<script type="text/javascript">
+		$(function() {
+			$('.gallery a').Chocolat();
+		});
+		</script>
+<!-- //js -->
+<script src="~/web/js/responsiveslides.min.js"></script>
+							<script>
+								// You can also use "$(window).load(function() {"
+								$(function () {
+								  // Slideshow 3
+								  $("#slider3").responsiveSlides({
+									auto: true,
+									pager:true,
+									nav:true,
+									speed: 500,
+									namespace: "callbacks",
+									before: function () {
+									  $('.events').append("<li>before event fired.</li>");
+									},
+									after: function () {
+									  $('.events').append("<li>after event fired.</li>");
+									}
+								  });
+							
+								});
+							 </script>
+
+		
+		<!--search-bar-->
+		<script src="~/web/js/main.js"></script>	
+<!--//search-bar-->
+<!--tabs-->
+<script src="~/web/js/easy-responsive-tabs.js"></script>
+<script>
+$(document).ready(function () {
+$('#horizontalTab').easyResponsiveTabs({
+type: 'default', //Types: default, vertical, accordion           
+width: 'auto', //auto or any width like 600px
+fit: true,   // 100% fit in a container
+closed: 'accordion', // Start closed if in accordion view
+activate: function(event) { // Callback function if tab is switched
+var $tab = $(this);
+var $info = $('#tabInfo');
+var $name = $('span', $info);
+$name.text($tab.text());
+$info.show();
+}
+});
+$('#verticalTab').easyResponsiveTabs({
+type: 'vertical',
+width: 'auto',
+fit: true
+});
+});
+</script>
+<!--//tabs-->
+<!-- smooth scrolling -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+		/*
+			var defaults = {
+			containerID: 'toTop', // fading element id
+			containerHoverID: 'toTopHover', // fading element hover id
+			scrollSpeed: 1200,
+			easingType: 'linear' 
+			};
+		*/								
+		$().UItoTop({ easingType: 'easeOutQuart' });
+		});
+	</script>
+	
+	
+	<a href="#home" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+<!-- //smooth scrolling -->
+	<script type="text/javascript" src="~/web/js/bootstrap-3.1.1.min.js"></script>
+
+</body>
+</html>

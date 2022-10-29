@@ -1,0 +1,48 @@
+﻿@model AdressVM
+
+@{
+    ViewData["Title"] = "AddAdress";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>AddAdress</h1>
+
+
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Yeni adres kaydı</h4>
+
+            <form class="forms-sample" method="post">
+                <div class="form-group">
+                    <span asp-validation-for="Adress.Description1" class="text-danger"></span>
+                    <label for="exampleInputName1">Acıklama 1</label>
+                    <input type="text" asp-for="Adress.Description1" class="form-control" id="exampleInputName1" placeholder="Acıklama 1">
+                </div>
+                <div class="form-group">
+                    <span asp-validation-for="Adress.Description2" class="text-danger"></span>
+                    <label for="exampleInputName1">Acıklama 2</label>
+                    <input type="text" asp-for="Adress.Description2" class="form-control" id="exampleInputName1" placeholder="Acıklama 2">
+                </div>
+                <div class="form-group">
+                    <span asp-validation-for="Adress.Description3" class="text-danger"></span>
+                    <label for="exampleInputName1">Acıklama 3</label>
+                    <input type="text" asp-for="Adress.Description3" class="form-control" id="exampleInputName1" placeholder="Acıklama 3">
+                </div>
+                <div class="form-group">
+                    <span asp-validation-for="Adress.Description4" class="text-danger"></span>
+                    <label for="exampleInputName1">Acıklama 4</label>
+                    <input type="text" asp-for="Adress.Description4" class="form-control" id="exampleInputName1" placeholder="Acıklama 4">
+                </div>
+                <div class="form-group">
+                    <span asp-validation-for="Adress.MapInfo" class="text-danger"></span>
+                    <label for="exampleInputName1">Harita</label>
+                    <input type="text" asp-for="Adress.MapInfo" class="form-control" id="exampleInputName1" placeholder="Harita">
+                </div>
+                <button type="submit" class="btn btn-primary me-2">Kaydet</button>
+                <button class="btn btn-light">Vazgec</button>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+﻿@model ServiceVM
+
+@{
+    ViewData["Title"] = "UpdateService";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>UpdateService</h1>
+
+<form method="post">
+    @Html.HiddenFor(x=> x.Service.ID)
+
+    @Html.Label("Baslık")
+    <input type="text" asp-for="Service.Title" class="form-control" />
+    <br />
+
+    @Html.Label("Acıklama")
+    <input type="text" asp-for="Service.Description" class="form-control" />
+    <br />
+    @Html.Label("Image Yolu")
+    <input type="text" asp-for="Service.Image" class="form-control" />
+    <br />
+    <button class="btn btn-primary"> Guncelle </button>
+</form>

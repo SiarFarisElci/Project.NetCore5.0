@@ -1,0 +1,77 @@
+﻿@model ImageVM
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Index</h1>
+
+
+
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Gorsel Listesi</h4>
+
+            <div class="table-responsive">
+
+                @if (Model.Images.Count == 0)
+                {
+                    <div>
+                        Henuz hicbir gorsel eklenmemiş.. Gorsel eklenmek icin <a asp-action="AddImage" asp-controller="Image"> Tıklayınız </a>
+                    </div>
+
+                }
+                else
+                {
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>
+                                    #
+                                </th>
+                                <th>
+                                   Baslık
+                                </th>
+                                <th>
+                                    Acıklama
+                                </th>
+                                <th>
+                                    Durum
+                                </th>
+                                <th colspan="2">  Islemler</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (Image item in Model.Images)
+                            {
+
+
+                                <tr>
+                                    <td class="py-1">
+                                        <img src="@item.ImageUrl" alt="image" />
+                                    </td>
+                                    <td>
+                                        @item.Title
+                                    </td>
+                                    <td>
+                                        @item.Description
+                                    </td>
+                                    <td>
+                                        @item.Status
+                                    </td>
+                                    <th><a asp-action="UpdateImage" asp-controller="Image" asp-route-id="@item.ID" class="btn btn-warning"> Guncelle </a></th>
+                                    <th><a asp-action="DeleteImage" asp-controller="Image" asp-route-id="@item.ID" class="btn btn-danger"> Sil </a></th>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                }
+
+                <br />
+                <button class="btn btn-warning" > <a href="/Image/AddImage" > Yeni Gorsel Ekle </a> </button>
+            </div>
+        </div>
+    </div>
+</div>

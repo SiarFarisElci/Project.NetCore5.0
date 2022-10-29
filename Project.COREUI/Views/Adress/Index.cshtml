@@ -1,0 +1,56 @@
+﻿@model AdressVM
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Index</h1>
+
+
+@if (Model.Adresses.Count == 0)
+{
+    <div>
+        Henuz hicbir Adress eklenmemiş.. Adress eklenmek icin <a asp-action="AddAdress" asp-controller="Adress"> Tıklayınız </a>
+    </div>
+
+}
+else
+{
+    <div class="card card-header">
+        <div class="card card-body">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                       
+                        <th> Acıkalama 1</th>
+                        <th> Acıkalama 2</th>
+                        <th> Acıkalama 3</th>
+                        <th> Acıkalama 4</th>
+                     
+                        <th>Durum </th>
+                        <th colspan="2">  Islemler</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (Adress item in Model.Adresses)
+                    {
+                        <tr>
+                            <th>@item.Description1</th>
+                            <th>@item.Description2</th>
+                            <th>@item.Description3</th>
+                            <th>@item.Description4</th>
+                          
+                            <th>@item.Status</th>
+                            <th><a asp-action="UpdateAdress" asp-controller="Adress" asp-route-id="@item.ID" class="btn btn-warning"> Guncelle </a></th>
+                            <th><a asp-action="DeleteAdress" asp-controller="Adress" asp-route-id="@item.ID" class="btn btn-danger"> Sil </a></th>
+                        </tr>
+                    }
+
+                </tbody>
+            </table>
+            <br>
+            <button class="btn btn-warning"> <a href="/Adress/AddAdress"> Ekle </a> </button>
+        </div>
+    </div>
+}

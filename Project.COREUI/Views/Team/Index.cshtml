@@ -1,0 +1,73 @@
+﻿@model TeamVM
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Takım Arkadaşlarımızın Listesi</h4>
+          
+            <div class="table-responsive">
+
+                @if (Model.Teams.Count == 0)
+                {
+                    <div>
+                        Henuz hicbir team eklenmemiş.. Team eklenmek icin <a asp-action="AddTeam" asp-controller="Team"> Tıklayınız </a>
+                    </div>
+
+                }
+                else
+                {
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>
+                                    #
+                                </th>
+                                <th>
+                                    Ad Soyad
+                                </th>
+                                <th>
+                                    Gorev
+                                </th>
+                                <th>
+                                    Durum
+                                </th>
+                                <th colspan="2">  Islemler</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (Team item in Model.Teams)
+                            {
+
+
+                                <tr>
+                                    <td class="py-1">
+                                        <img src="../../images/faces/face1.jpg" alt="image" />
+                                    </td>
+                                    <td>
+                                        @item.FullName
+                                    </td>
+                                    <td>
+                                        @item.Title
+                                    </td>
+                                    <td>
+                                        @item.Status
+                                    </td>
+                                    <th><a asp-action="UpdateTeam" asp-controller="Team" asp-route-id="@item.ID" class="btn btn-warning"> Guncelle </a></th>
+                                    <th><a asp-action="DeleteTeam" asp-controller="Team" asp-route-id="@item.ID" class="btn btn-danger"> Sil </a></th>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                }
+                <br>
+                <button class="btn btn-warning"> <a href="/Team/AddTeam"> Ekle </a> </button>
+            </div>
+        </div>
+    </div>
+</div>
+

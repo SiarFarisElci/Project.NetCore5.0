@@ -1,0 +1,38 @@
+﻿@model ContactVM
+
+@{
+    ViewData["Title"] = "AddContact";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>AddContact</h1>
+
+
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Yeni contact kaydı</h4>
+
+            <form class="forms-sample" method="post">
+                <div class="form-group">
+                    <span asp-validation-for="Contact.Name" class="text-danger"></span>
+                    <label for="exampleInputName1">Adınız</label>
+                    <input type="text" asp-for="Contact.Name" class="form-control" id="exampleInputName1" placeholder="Adınız">
+                </div>
+                <div class="form-group">
+                    <span asp-validation-for="Contact.Mail" class="text-danger"></span>
+                    <label for="exampleInputName1">Mail</label>
+                    <input type="email" asp-for="Contact.Mail" class="form-control" id="exampleInputName1" placeholder="Mail adresiniz">
+                </div>
+                <div class="form-group">
+                    <span asp-validation-for="Contact.Message" class="text-danger"></span>
+                    <label for="exampleInputName1">Mesaj</label>
+                    <input type="text" asp-for="Contact.Message" class="form-control" id="exampleInputName1" placeholder="Mesajınız 1">
+                </div>
+                <button type="submit" class="btn btn-primary me-2">Kaydet</button>
+                <button class="btn btn-light">Vazgec</button>
+            </form>
+        </div>
+    </div>
+</div>
